@@ -1,9 +1,11 @@
+#In the midst of adapting this into a gem. I'm not the original author, all credit goes to Erik Flowers.
+
 # Weather Icons
 *Version Beta 1 - August 3rd 2013*
 
 ## A free, open source icon-font of Weather icons
 
-Weather Icons is a font of 92 weather themed icons, ready to be dropped right into [Bootstrap](http://www.getbootstrap.com) or any other project. 
+Weather Icons is a font of 92 weather themed icons, ready to be dropped right into [Bootstrap](http://www.getbootstrap.com) or any other project.
 
 Inspired by [Font Awesome](http://fontawesome.io/), They work in essentially the same way. They are infinitley scalable and any CSS that can be applied to text can be applied to them. All you need to do to insert an icon is add the class to an "i" element:
 
@@ -16,7 +18,7 @@ At this time, there are no other effects/mixins to do advanced icon manipulation
 ## Getting Started
 Getting started is easy. First, put the fonts in the directory ABOVE your css directory. By default, the fonts are referencing a ../font/ folder that is on the same level as /css. This can be changed via the `@WeatherIconPath` variable in variables.less
 
-Include in your main .less file `weather-icons/weather-icons.less` and that is all you need to do. 
+Include in your main .less file `weather-icons/weather-icons.less` and that is all you need to do.
 
 #### CSS Only Method
 If you just want to add a css file to your project with no Less compiling, you just need to reference the `weather-icons.css` included in the css folder. *If you are not familiar with using Bootstrap, or using Bootstrap in the precompiled Less mode, I would reccommend you give it a try)*

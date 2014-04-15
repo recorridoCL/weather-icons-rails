@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/font-awesome-rails/version', __FILE__)
+require File.expand_path('../lib/weather-icons-rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["cody"]
@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = Dir["test/**/*"]
   gem.name          = "font-awesome-rails"
   gem.require_paths = ["lib"]
-  gem.version       = FontAwesome::Rails::VERSION
+  gem.version       = WeatherIcons::Rails::VERSION
 
   gem.add_dependency "railties", ">= 3.2", "< 5.0"
 

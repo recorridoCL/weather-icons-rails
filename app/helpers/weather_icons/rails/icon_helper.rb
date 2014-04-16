@@ -1,4 +1,4 @@
-module FontAwesome
+module WeatherIcons
   module Rails
     module IconHelper
       # Creates an icon tag given an icon name and possible icon
@@ -27,14 +27,14 @@ module FontAwesome
       #
       #   content_tag(:li, fa_icon("check li", text: "Bulleted list item"))
       #   # => <li><i class="fa fa-check fa-li"></i> Bulleted list item</li>
-      def fa_icon(names = "flag", options = {})
-        classes = ["fa"]
-        classes.concat Private.icon_names(names)
-        classes.concat Array(options.delete(:class))
-        text = options.delete(:text)
-        icon = content_tag(:i, nil, options.merge(:class => classes))
-        Private.icon_join(icon, text)
-      end
+      # def fa_icon(names = "flag", options = {})
+      #   classes = ["fa"]
+      #   classes.concat Private.icon_names(names)
+      #   classes.concat Array(options.delete(:class))
+      #   text = options.delete(:text)
+      #   icon = content_tag(:i, nil, options.merge(:class => classes))
+      #   Private.icon_join(icon, text)
+      # end
 
       # Creates an stack set of icon tags given a base icon name, a main icon
       # name, and possible icon modifiers.
@@ -58,35 +58,35 @@ module FontAwesome
       #   # =>   <i class="fa fa-camera fa-stack-1x"></i>
       #   # =>   <i class="fa fa-ban-circle fa-stack-2x"></i>
       #   # => </span>
-      def fa_stacked_icon(names = "flag", options = {})
-        classes = Private.icon_names("stack").concat(Array(options.delete(:class)))
-        base_names = Private.array_value(options.delete(:base) || "square-o").push("stack-2x")
-        names = Private.array_value(names).push("stack-1x")
-        base = fa_icon(base_names, options.delete(:base_options) || {})
-        icon = fa_icon(names, options.delete(:icon_options) || {})
-        icons = [base, icon]
-        icons.reverse! if options.delete(:reverse)
-        text = options.delete(:text)
-        stacked_icon = content_tag(:span, safe_join(icons), options.merge(:class => classes))
-        Private.icon_join(stacked_icon, text)
-      end
-
-      module Private
-        extend ActionView::Helpers::OutputSafetyHelper
-
-        def self.icon_join(icon, text)
-          return icon if text.blank?
-          safe_join([icon, ERB::Util.html_escape(text)], " ")
-        end
-
-        def self.icon_names(names = [])
-          array_value(names).map { |n| "fa-#{n}" }
-        end
-
-        def self.array_value(value = [])
-          value.is_a?(Array) ? value : value.to_s.split(/\s+/)
-        end
-      end
+      # def fa_stacked_icon(names = "flag", options = {})
+      #   classes = Private.icon_names("stack").concat(Array(options.delete(:class)))
+      #   base_names = Private.array_value(options.delete(:base) || "square-o").push("stack-2x")
+      #   names = Private.array_value(names).push("stack-1x")
+      #   base = fa_icon(base_names, options.delete(:base_options) || {})
+      #   icon = fa_icon(names, options.delete(:icon_options) || {})
+      #   icons = [base, icon]
+      #   icons.reverse! if options.delete(:reverse)
+      #   text = options.delete(:text)
+      #   stacked_icon = content_tag(:span, safe_join(icons), options.merge(:class => classes))
+      #   Private.icon_join(stacked_icon, text)
+      # end
+      #
+      # module Private
+      #   extend ActionView::Helpers::OutputSafetyHelper
+      #
+      #   def self.icon_join(icon, text)
+      #     return icon if text.blank?
+      #     safe_join([icon, ERB::Util.html_escape(text)], " ")
+      #   end
+      #
+      #   def self.icon_names(names = [])
+      #     array_value(names).map { |n| "fa-#{n}" }
+      #   end
+      #
+      #   def self.array_value(value = [])
+      #     value.is_a?(Array) ? value : value.to_s.split(/\s+/)
+      #   end
+      # end
     end
   end
 end

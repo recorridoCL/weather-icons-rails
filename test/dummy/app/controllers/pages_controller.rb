@@ -1,2 +1,2 @@
-class PagesController < ActionController::Base
-end
+# class PagesController < ActionController::Base
+# end

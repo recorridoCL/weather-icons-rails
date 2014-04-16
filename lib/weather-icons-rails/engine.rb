@@ -1,4 +1,6 @@
-module WeatherIconsRails
-  class Engine < ::Rails::Engine
+module WeatherIcons
+  module Rails
+    class Engine < ::Rails::Engine
+    end
   end
 end

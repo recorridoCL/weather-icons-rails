@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 require File.expand_path('../lib/weather-icons-rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
@@ -10,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.date          = '2014-04-15'
 
   gem.name          = "weather-icons-rails"
-  gem.version       = WeatherIconsRails::VERSION
+  gem.version       = WeatherIcons::Rails::VERSION
   gem.files         = Dir["{app,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   gem.test_files    = Dir["test/**/*"]
   gem.require_paths = ["lib"]

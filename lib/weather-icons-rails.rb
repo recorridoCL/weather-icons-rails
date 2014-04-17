@@ -1,2 +1,3 @@
-require "weather-icons-rails/version"
-require "weather-icons-rails/engine" if defined?(::Rails)
+require 'weather-icons/rails'
+# require "weather-icons-rails/version"
+# require "weather-icons-rails/engine" if defined?(::Rails)

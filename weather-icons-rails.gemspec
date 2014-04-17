@@ -1,5 +1,8 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/weather-icons-rails/version', __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require File.expand_path('../lib/weather-icons/rails/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Cody Schaaf"]
@@ -22,6 +25,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "sass-rails", '~> 4.0.1'
   gem.add_development_dependency 'bundler', '~> 1.3'
   gem.add_development_dependency 'rake', '~> 10.3.0'
+  gem.add_development_dependency 'compass'
 
   gem.add_runtime_dependency 'sass', '~> 3.2'
 end

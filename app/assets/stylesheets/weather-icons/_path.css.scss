@@ -1,0 +1,13 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'weather';
+  src: font-url('weathericons-regular-webfont.eot?v=#{$wi-version}');
+  src: font-url('weathericons-regular-webfont.eot?#iefix&v=#{$wi-version}') format('embedded-opentype'),
+       font-url('weathericons-regular-webfont.woff?v=#{$wi-version}') format('woff'),
+       font-url('weathericons-regular-webfont.ttf?v=#{$wi-version}') format('truetype'),
+       font-url('weathericons-regular-webfont.svg?v=#{$wi-version}#weather_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

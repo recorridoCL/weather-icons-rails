@@ -1,5 +1,5 @@
 
-# Weather::Icons::Rails [![Gem Version](https://badge.fury.io/rb/weather-icons-rails@2x.svg)](http://rubygems.org/gems/weather-icons-rails)
+# Weather::Icons::Rails [![Gem Version](https://badge.fury.io/rb/weather-icons-rails@2x.svg)](http://rubygems.org/gems/weather-icons-rails) [![Build Status](https://travis-ci.org/CodySchaaf/weather-icons-rails.svg?branch=master)](https://travis-ci.org/CodySchaaf/weather-icons-rails)
 Weather-Icons-Rails gem for use in Ruby projects
 
 ## A free, open source font of Weather icons

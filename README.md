@@ -103,7 +103,7 @@ Supported classes:
   .wi-border
 ```
 
-## Version 0.0.2 (BETA?)
+## Version 0.0.3.1 (BETA?)
 This is my first attempt at making a gem, please feel free to send me any pull requests or questions. I'm happy to help and or learn. Thanks!
 
 The icon designs are originally by [Lukas Bischoff](http://www.twitter.com/artill). The font has been modified slightly for icon-font usage, which was then turned into a HTML/CSS/LESS addon by [Erik Flowers](http://www.helloerik.com). My gem was originally based off of the hard work over at [Font Awesome Rails](https://github.com/bokmann/font-awesome-rails) and then updated to closely mirror the Sass based version at [Font Awesome Sass](https://github.com/FortAwesome/font-awesome-sass).

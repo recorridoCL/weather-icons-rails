@@ -2,6 +2,12 @@
 // -------------------------
 
 /* makes the font 33% larger relative to the icon container */
+.#{$wi-css-prefix}-xs {
+  font-size: (2em /3);
+  line-height: (3em / 2);
+  vertical-align: 15%;
+}
+
 .#{$wi-css-prefix}-md {
   font-size: (4em / 3);
   line-height: (3em / 4);
@@ -15,7 +21,7 @@
 .#{$wi-css-prefix}-xl {
   font-size: (6em / 3);
   line-height: (5em / 6);
-  vertical-align: -25%;
+  vertical-align: -30%;
 }
 .#{$wi-css-prefix}-2x {
   font-size: 2em;

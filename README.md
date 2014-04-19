@@ -36,7 +36,8 @@ To add icons anywhere in your html just add one of these tags with your symbole 
 ```
 ## If that wasn't easy enough, Helpers make it even easier!
 
-In your view just add these to your HAML or ERB:
+######In your view just add these to your HAML or ERB:
+
 ```ruby
 wi_icon('day-lightning')
 # => <i class="wi wi-day-lightning"></i>
@@ -59,6 +60,9 @@ wi_icon('day-lightning', 'Weather Icons', id: 'lightning', class: 'strong')
 content_tag(:li, wi_icon("day-lightning li", text: "Bulleted list item"))
 # => <li><i class="wi wi-day-lightning wi-li"></i> Bulleted list item</li>
 ```
+
+I cant really think of a use for this, but I'm sure someone can. Works better with empty box icon in font awesome.
+
 ```ruby
 wi_stacked_icon "day-lightning", base: "day-cloudy-gusts"
 # => <span class="fa-stack">
@@ -73,6 +77,38 @@ wi_stacked_icon "day-lightning inverse", base: 'day-cloudy-gusts', class: "pull-
 # => </span> Hi!
 ```
 
+#### Weathered Lists:
+
+###### Use wi-li tag with an icon nested inside a ul.wi-ul > li list to have it used as the bullet point. Must have text or element after it to work
+
+```ruby
+wi_list_item('wi-day-hail', 'Bad Weather Today')
+# => <li><i class="wi wi-day-hail wi-li"></i> Bad Weather Today</li>
+
+wi_list_item('wi-day-hail md', 'Bad Weather Today', icon_options: {class: 'inverse'}, class: 'something' )
+# => <li class="something"><i class="wi wi-day-hail wi-md wi-li inverse"></i> Bad Weather Today</li>
+```
+```ruby
+wi_list('wi-day-hail', ['Bad Weather', 'Good Weather'])
+# => <ul class: 'wi-ul'>
+# =>   <li>
+# =>     <i class="wi wi-day-hail wi-li"></i> Bad Weather
+# =>   </li>
+# =>   <li>
+# =>     <i class="wi wi-day-hail wi-li"></i> Good Weather
+# =>   </li>
+# => </ul>
+
+wi_list('wi-day-hail lg', ['Bad Weather', 'Good Weather'], icon_options: {class: 'pull-right'}, class: 'something' )
+# => <ul class: 'wi-ul'>
+# =>   <li class="something">
+# =>     <i class="wi wi-day-hail wi-lg wi-li pull-right"></i> Bad Weather
+# =>   </li>
+# =>   <li class="something">
+# =>     <i class="wi wi-day-hail wi-lg wi-li pull-right"></i> Good Weather
+# =>   </li>
+# => </ul>
+```
 ##Fancy css classes for fancy people.
 
 Supported classes:
@@ -87,9 +123,10 @@ Supported classes:
   .wi-flip-horizontal
   .wi-flip-vertical  
 
-  .wi-ul
-  .wi-li
+  .wi-ul  # Use this to create a nicely formated vertical list of icons
+  .wi-li  # Assigne to icon for bullet points
 
+  .wi-xs
   .wi-md
   .wi-lg
   .wi-xl
@@ -103,7 +140,7 @@ Supported classes:
   .wi-border
 ```
 
-## Version 0.0.3.3 (BETA?)
+## Version 0.1.0
 This is my first attempt at making a gem, please feel free to send me any pull requests or questions. I'm happy to help and or learn. Thanks!
 
 The icon designs are originally by [Lukas Bischoff](http://www.twitter.com/artill). The font has been modified slightly for icon-font usage, which was then turned into a HTML/CSS/LESS addon by [Erik Flowers](http://www.helloerik.com). My gem was originally based off of the hard work over at [Font Awesome Rails](https://github.com/bokmann/font-awesome-rails) and then updated to closely mirror the Sass based version at [Font Awesome Sass](https://github.com/FortAwesome/font-awesome-sass).

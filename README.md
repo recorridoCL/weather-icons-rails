@@ -36,7 +36,7 @@ To add icons anywhere in your html just add one of these tags with your symbole 
 ```
 ## If that wasn't easy enough, Helpers make it even easier!
 
-######In your view just add these to your HAML or ERB:
+#####In your view just add these to your HAML or ERB:
 
 ```ruby
 wi_icon('day-lightning')
@@ -45,7 +45,6 @@ wi_icon('day-lightning')
 ```ruby
 wi_icon('day-lightning', '', class: 'strong')
 # => <i class="wi wi-day-lightning strong"></i>
-# Although this currently does not change the actual look of the font yet. Any suggestions?
 ```
 ```ruby
 wi_icon "day-lightning lg", class: "text-muted pull-left"
@@ -61,7 +60,7 @@ content_tag(:li, wi_icon("day-lightning li", text: "Bulleted list item"))
 # => <li><i class="wi wi-day-lightning wi-li"></i> Bulleted list item</li>
 ```
 
-I cant really think of a use for this, but I'm sure someone can. Works better with empty box icon in font awesome.
+I cant really think of a use for this, but I'm sure someone can. Works better with empty box icon in Font Awesome.
 
 ```ruby
 wi_stacked_icon "day-lightning", base: "day-cloudy-gusts"
@@ -79,7 +78,7 @@ wi_stacked_icon "day-lightning inverse", base: 'day-cloudy-gusts', class: "pull-
 
 #### Weathered Lists:
 
-###### Use wi-li tag with an icon nested inside a ul.wi-ul > li list to have it used as the bullet point. Must have text or element after it to work
+##### Use `wi-li` tag with an icon nested inside a `ul.wi-ul > li` list to have it used as the bullet point. Must have text or element after it to work
 
 ```ruby
 wi_list_item('wi-day-hail', 'Bad Weather Today')

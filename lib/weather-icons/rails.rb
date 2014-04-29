@@ -48,8 +48,8 @@ module WeatherIcons
 
       def register_rails_engine
         require 'sass-rails'
-        require 'weather-icons/rails/rails/engine'
-        require 'weather-icons/rails/rails/railtie'
+        require 'weather-icons/rails/engine'
+        require 'weather-icons/rails/railtie'
       end
     end
   end

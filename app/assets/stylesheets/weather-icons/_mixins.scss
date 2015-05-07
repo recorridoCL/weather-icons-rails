@@ -1,6 +1,8 @@
 // Mixins
 // --------------------------
 
+// The MS rotation code is courtesy of
+// https://coderwall.com/p/iqn-gq/cross-browser-css-rotation-sass-mixin
 @mixin wi-icon-rotate($degrees) {
   -webkit-transform: rotate($degrees);
      -moz-transform: rotate($degrees);

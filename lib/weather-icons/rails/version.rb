@@ -1,5 +1,5 @@
 module WeatherIcons
   module Rails
-    VERSION = "0.1.1"
+    VERSION = "1.3.2.0"
   end
 end
